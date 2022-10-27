@@ -4,9 +4,11 @@ from flask import Flask, request, render_template
 app= Flask(__name__)
 
 
+
+
 @ app.route('/')
-def  login():
-    return "content"  
+def  homepage():
+    return render_template("home_anon.html")  
 
 @app.errorhandler(404)
 def page_not_found():
